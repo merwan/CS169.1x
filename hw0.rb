@@ -11,10 +11,8 @@ end
 
 def sum_to_n?(integers, n)
   return false if integers.length <= 1
-  integers.each do |i|
-    integers.each do |j|
-      return true if i + j == n
-    end
+  integers.permutation(2).each do |a|
+    return true if sum(a) == n
   end
   return false
 end
