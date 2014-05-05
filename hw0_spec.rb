@@ -27,3 +27,17 @@ describe "#max_2_sum" do
     max_2_sum([456]).should eq(456)
   end
 end
+
+describe "#sum_to_n?" do
+  it "returns true when any two elements sum to the second argument" do
+    sum_to_n?([-1,-2,3,4,6,-8], 12).should be_false
+  end
+
+  it "returns false for the single element array" do
+    sum_to_n?([1], 1).should be_false
+  end
+
+  it "returns false for the empty array" do
+    sum_to_n?([], 0).should be_false
+  end
+end
