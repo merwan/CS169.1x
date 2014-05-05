@@ -18,4 +18,8 @@ describe "#starts_with_consonant?" do
   it "returns true when starts with a consonant" do
     starts_with_consonant?("qsd").should be_true
   end
+
+  it "returns false for empty string" do
+    starts_with_consonant?("").should be_false
+  end
 end
