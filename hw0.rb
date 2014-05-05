@@ -11,7 +11,7 @@ def max_2_sum(integers)
 end
 
 def sum_to_n?(integers, n)
-  return 0 if integers.length <= 1
+  return false if integers.length <= 1
   integers.each do |i|
     integers.each do |j|
       return true if i + j == n
