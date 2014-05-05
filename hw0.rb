@@ -1,7 +1,6 @@
 def sum(integers)
-  sum = 0
-  integers.each { |i| sum += i }
-  sum
+  return 0 if integers.empty?
+  integers.reduce(:+)
 end
 
 def max_2_sum(integers)
