@@ -22,6 +22,10 @@ describe "#starts_with_consonant?" do
   it "returns false for empty string" do
     starts_with_consonant?("").should be_false
   end
+
+  it "returns false when start with nonletter" do
+    starts_with_consonant?("#foo").should be_false
+  end
 end
 
 describe "#binary_multiple_of_4?" do
