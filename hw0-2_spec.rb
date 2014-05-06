@@ -23,3 +23,17 @@ describe "#starts_with_consonant?" do
     starts_with_consonant?("").should be_false
   end
 end
+
+describe "#binary_multiple_of_4?" do
+  it "returns false if empty string" do
+    binary_multiple_of_4?("").should be_false
+  end
+
+  it "returns true if multiple of 4" do
+    binary_multiple_of_4?("100").should be_true
+  end
+
+  it "returns false if not multiple of 4" do
+    binary_multiple_of_4?("1").should be_false
+  end
+end
