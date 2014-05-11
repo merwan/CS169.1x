@@ -4,7 +4,12 @@ module FunWithStrings
     phrase == phrase.reverse
   end
   def count_words
-    # your code here
+    words = {}
+    self.downcase.split.each do |word|
+      words[word] = 0 unless words.has_key? word
+      words[word] += 1
+    end
+    words
   end
   def anagram_groups
     # your code here
