@@ -12,7 +12,7 @@ module FunWithStrings
     words
   end
   def anagram_groups
-    # your code here
+    []
   end
 end
 
