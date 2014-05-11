@@ -5,7 +5,7 @@ module FunWithStrings
   end
   def count_words
     words = {}
-    self.downcase.split.each do |word|
+    self.downcase.scan(/\w+/).each do |word|
       words[word] = 0 unless words.has_key? word
       words[word] += 1
     end
