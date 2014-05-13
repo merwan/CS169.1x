@@ -23,7 +23,7 @@ class RockPaperScissors
   end
 
   def self.tournament_winner(tournament)
-    # YOUR CODE HERE
+    self.winner(tournament[0], tournament[1])
   end
 
 end
