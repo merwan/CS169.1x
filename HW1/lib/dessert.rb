@@ -7,7 +7,7 @@ class Dessert
     @calories = calories
   end
   def healthy?
-    @name == "apple"
+    @calories < 200
   end
   def delicious?
     true
