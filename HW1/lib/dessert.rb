@@ -10,12 +10,20 @@ class Dessert
     @name == "apple"
   end
   def delicious?
-    @name = 'cake'
+    true
   end
 end
 
 class JellyBean < Dessert
+  attr_accessor :flavor
+
   def initialize(flavor)
-    # your code here
+    @name = "#{flavor} jelly bean"
+    @calories = 5
+    @flavor = flavor
+  end
+
+  def delicious?
+    @flavor != 'licorice'
   end
 end
