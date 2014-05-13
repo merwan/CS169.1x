@@ -23,7 +23,13 @@ class RockPaperScissors
   end
 
   def self.tournament_winner(tournament)
-    self.winner(tournament[0], tournament[1])
+    if tournament[0][0].class == String
+      player1, player2 = tournament
+      return self.winner(player1, player2)
+    end
+    p1 = self.tournament_winner(tournament[0])
+    p2 = self.tournament_winner(tournament[1])
+    self.tournament_winner([p1, p2])
   end
 
 end
